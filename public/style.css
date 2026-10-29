@@ -1,0 +1,56 @@
+:root {
+  color-scheme: dark;
+  --bg: #140c09;
+  --card: #24140f;
+  --line: #5a2a1c;
+  --text: #f6efe6;
+  --muted: #c7ab99;
+  --hot: #ff4d2e;
+  --ok: #d6ff4a;
+  font-family: "Avenir Next", "Segoe UI", sans-serif;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at top left, #3a160f, transparent 36%),
+    var(--bg);
+  color: var(--text);
+}
+main { max-width: 980px; margin: 0 auto; padding: 28px 18px 64px; }
+header { display: flex; justify-content: space-between; gap: 20px; align-items: center; }
+header img { width: 96px; height: 96px; border: 2px solid var(--hot); object-fit: cover; }
+h1 { margin: 0; font-size: 42px; letter-spacing: -0.04em; }
+h2 { margin: 0 0 10px; font-size: 18px; }
+.eyebrow { margin: 0; color: var(--hot); text-transform: uppercase; letter-spacing: 0.14em; font-size: 12px; }
+.card { background: var(--card); border: 1px solid var(--line); padding: 16px; margin-top: 14px; }
+.grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.grid .card { margin-top: 0; }
+.grid span, .muted { color: var(--muted); }
+.grid strong { display: block; margin-top: 6px; font-size: 22px; word-break: break-word; }
+label { display: grid; gap: 6px; }
+input, button, a {
+  font: inherit;
+}
+input { background: #100805; color: var(--text); border: 1px solid var(--line); padding: 10px; }
+button, a {
+  border: 0;
+  background: var(--hot);
+  color: white;
+  padding: 10px 14px;
+  text-decoration: none;
+  cursor: pointer;
+}
+button.ghost { background: transparent; border: 1px solid var(--line); }
+button.warn { background: #8a2b12; }
+.controls { display: flex; flex-wrap: wrap; gap: 8px; }
+.error { color: #ffb4a4; min-height: 1.2em; }
+#log { margin: 0; padding-left: 18px; max-height: 280px; overflow: auto; }
+#log li { margin: 4px 0; }
+.wallet { display: grid; grid-template-columns: 1fr auto; gap: 8px; border-top: 1px solid var(--line); padding: 8px 0; }
+.wallet code { color: var(--ok); word-break: break-all; }
+@media (max-width: 800px) {
+  .grid { grid-template-columns: 1fr 1fr; }
+  header { align-items: flex-start; }
+  h1 { font-size: 32px; }
+}

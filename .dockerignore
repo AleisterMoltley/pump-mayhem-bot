@@ -1,0 +1,7 @@
+node_modules
+.env
+runtime
+.git
+data/wallets.jsonl
+data/state.json
+data/image-cid.txt

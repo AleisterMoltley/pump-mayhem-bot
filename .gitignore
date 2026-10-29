@@ -1,0 +1,9 @@
+node_modules
+.env
+runtime
+data/wallets.jsonl
+data/wallets.jsonl.tmp
+data/state.json
+data/state.json.tmp
+data/image-cid.txt
+*.log

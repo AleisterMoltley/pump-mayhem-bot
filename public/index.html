@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mayhem Farm</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main>
+    <header>
+      <div>
+        <p class="eyebrow">pump.fun · ein Coin nach dem anderen</p>
+        <h1>Mayhem Farm</h1>
+      </div>
+      <img src="/brand/boycott.png" alt="Boycott Pump.fun">
+    </header>
+    <section id="login" class="card">
+      <h2>Zugang</h2>
+      <form id="login-form">
+        <label>Passwort<input id="password" type="password" autocomplete="current-password" required></label>
+        <button type="submit">Öffnen</button>
+        <p id="login-error" class="error"></p>
+      </form>
+    </section>
+    <section id="app" hidden>
+      <section class="grid">
+        <article class="card"><span>Status</span><strong id="status">—</strong></article>
+        <article class="card"><span>SOL im Deploy-Wallet</span><strong id="balance">—</strong></article>
+        <article class="card"><span>Nächstes Wort</span><strong id="word">—</strong></article>
+        <article class="card"><span>Ergebnis</span><strong id="pnl">—</strong></article>
+      </section>
+      <section class="card controls">
+        <button id="start" type="button">Start</button>
+        <button id="stop" type="button" class="ghost">Stopp</button>
+        <button id="sell" type="button" class="warn">Offene Position verkaufen</button>
+        <a id="export" href="/api/wallets/export">Key-Bibliothek laden</a>
+      </section>
+      <section class="card">
+        <h2>Aktuelle Runde</h2>
+        <p id="phase">Keine offene Position.</p>
+        <p id="warnings" class="error"></p>
+      </section>
+      <section class="card">
+        <h2>Wallet-Bibliothek</h2>
+        <p class="muted">Jeder Private Key wird gespeichert, bevor SOL dieses Wallet verlässt. Auf Railway muss ein Volume auf <code>/data</code> liegen, sonst startet der Bot nicht.</p>
+        <div id="wallets"></div>
+      </section>
+      <section class="card">
+        <h2>Log</h2>
+        <ol id="log"></ol>
+      </section>
+    </section>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>
